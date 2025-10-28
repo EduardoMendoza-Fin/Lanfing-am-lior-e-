@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
 import '../styles/globals.css';
+import { Analytics } from '@vercel/analytics/react'; // ✅ ajout ici
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -69,6 +70,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
       {/* ---- COMPOSANT PRINCIPAL ---- */}
       <Component {...pageProps} />
+
+      {/* ---- ANALYTICS VERCEL ---- */}
+      <Analytics /> {/* ✅ tracking automatique */}
     </>
   );
 }

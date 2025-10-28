@@ -8,11 +8,8 @@ const steps = [
   {
     title: 'Un conseiller certifié au Québec analyse votre profil.',
     description: 'Votre analyse est faite par un vrai professionnel, pas un robot.'
-  },
-  {
-    title: 'Recevez vos meilleures options gratuitement, sans engagement.',
-    description: 'Vous obtenez un rapport clair pour choisir la protection qui vous convient le mieux.'
   }
+  
 ];
 
 type HowItWorksProps = {
