@@ -1,5 +1,11 @@
+/* ================================
+   🌐 GLOBAL STYLESHEET
+   Landing Page — Analyse hypothécaire
+   ================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+/* ----------- VARIABLES ----------- */
 :root {
   --blue-deep: #1a365d;
   --gold-soft: #f5b800;
@@ -7,36 +13,31 @@
   --text-dark: #111827;
 }
 
+/* ----------- RESET GLOBAL ----------- */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
   color: var(--text-dark);
   background-color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font-family: inherit;
-}
-
-.section {
-  padding: 3rem 1.5rem;
-}
-
-.container {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-}
-
-h2 {
+/* ----------- TYPOGRAPHIE ----------- */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-dark);
   font-weight: 700;
   margin: 0 0 1rem;
 }
@@ -46,18 +47,33 @@ p {
   margin: 0 0 1rem;
 }
 
+/* ----------- LIENS ET BOUTONS ----------- */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* ----------- CTA GLOBAL ----------- */
 .cta-button {
   background: linear-gradient(135deg, var(--gold-soft), #ffd24d);
   border: none;
   color: #1a1a1a;
-  padding: 0.9rem 1.8rem;
+  padding: 1rem 2rem;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -66,11 +82,53 @@ p {
   box-shadow: 0 12px 24px rgba(245, 184, 0, 0.25);
 }
 
+.cta-button:active {
+  transform: scale(0.98);
+}
+
 .cta-button:focus {
   outline: 3px solid rgba(245, 184, 0, 0.3);
   outline-offset: 2px;
 }
 
+/* ----------- SECTIONS ET CONTAINERS ----------- */
+.section {
+  padding: 3rem 1.5rem;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+/* ----------- STYLE ALTERNÉ DES SECTIONS ----------- */
+.section:nth-of-type(even) {
+  background-color: var(--gray-light);
+}
+
+/* ----------- FORM ELEMENTS ----------- */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(26, 54, 93, 0.25);
+  padding: 0.7rem 0.9rem;
+  transition: all 0.2s ease;
+  background-color: #f9fafb;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--blue-deep);
+  box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.15);
+}
+
+/* ----------- TAGLINES / PETITS TEXTES ----------- */
 .tagline {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -79,8 +137,34 @@ p {
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* ----------- ANIMATIONS ----------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------- RESPONSIVE ----------- */
 @media (min-width: 768px) {
   .section {
     padding: 4.5rem 1.5rem;
   }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* ----------- BONUS : PETITES TRANSITIONS ----------- */
+button,
+a,
+input,
+select {
+  transition: all 0.2s ease;
 }

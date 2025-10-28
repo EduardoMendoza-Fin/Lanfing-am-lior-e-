@@ -3,15 +3,15 @@ import styles from './HowItWorks.module.css';
 const steps = [
   {
     title: 'Remplissez le court formulaire (30 secondes).',
-    description: 'Nous ne demandons que les informations essentielles pour comprendre votre situation.'
+    description: '👉 Seulement les infos essentielles pour comprendre votre situation.'
   },
   {
     title: 'Un conseiller certifié au Québec analyse votre profil.',
-    description: 'Chaque analyse est réalisée par un professionnel qui connaît les exigences locales.'
+    description: 'Votre analyse est faite par un vrai professionnel, pas un robot.'
   },
   {
-    title: 'Vous recevez vos meilleures options gratuitement, sans engagement.',
-    description: 'Nous vous envoyons un rapport clair pour décider sereinement de la meilleure protection.'
+    title: 'Recevez vos meilleures options gratuitement, sans engagement.',
+    description: 'Vous obtenez un rapport clair pour choisir la protection qui vous convient le mieux.'
   }
 ];
 
@@ -24,19 +24,19 @@ const HowItWorks = ({ onStart }: HowItWorksProps) => {
     <section className={`section ${styles.wrapper}`}>
       <div className="container">
         <h2>Comment ça fonctionne</h2>
-        <div className={styles.timeline}>
+
+        <div className={styles.grid}>
           {steps.map((step, index) => (
-            <div key={step.title} className={styles.step}>
+            <div key={step.title} className={styles.card}>
               <div className={styles.marker}>{index + 1}</div>
-              <div>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </div>
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
             </div>
           ))}
         </div>
+
         <div className={styles.ctaContainer}>
-          <button className="cta-button" onClick={onStart}>
+          <button className={styles.ctaButton} onClick={onStart}>
             Commencer maintenant
           </button>
         </div>

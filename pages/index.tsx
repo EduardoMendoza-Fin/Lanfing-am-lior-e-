@@ -6,30 +6,37 @@ import FormSection from '../components/Form';
 import styles from '../styles/Home.module.css';
 
 const HomePage = () => {
-  const formRef = useRef<HTMLDivElement | null>(null);
+  const formRef = useRef<HTMLElement | null>(null);
 
   const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const formElement = document.getElementById('lead-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
     <div className={styles.page}>
-      <Hero onDiscoverClick={scrollToForm} />
+      <Hero onScrollToForm={scrollToForm} />
       <Tips onRequestAnalysis={scrollToForm} />
       <HowItWorks onStart={scrollToForm} />
-      <div ref={formRef}>
+      <section ref={formRef}>
         <FormSection />
-      </div>
+      </section>
+
+      {/* ----------- SECTION REASSURANCE ----------- */}
       <section className={`section ${styles.reassurance}`}>
         <div className="container">
-          <h2>Pourquoi cette analyse est gratuite ?</h2>
+          <h2>Pourquoi cette analyse est gratuite&nbsp;?</h2>
           <p>
-            Cette analyse vise simplement à informer les propriétaires sur les options souvent méconnues de protection
-            hypothécaire. Elle ne remplace pas un conseil financier et ne mène à aucune vente directe. Votre confidentialité est
-            garantie.
+            Cette analyse indépendante a pour seul objectif d’informer les propriétaires sur les solutions d’assurance
+            hypothécaire souvent méconnues au Québec. <br />
+             <br />
+            <strong>Votre confidentialité est 100&nbsp;% garantie.</strong>
           </p>
         </div>
       </section>
+
       <footer className={styles.footer}>
         Service d’analyse indépendante – 100 % confidentiel – Québec.
       </footer>

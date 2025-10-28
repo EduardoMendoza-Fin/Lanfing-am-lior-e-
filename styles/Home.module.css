@@ -1,27 +1,28 @@
-.page {
-  background-color: #ffffff;
-}
-
 .reassurance {
-  background-color: #f2f4f7;
+  background: linear-gradient(to bottom, #f9fafb 0%, #f2f4f7 100%);
   text-align: center;
   color: #1f2937;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-top: 1px solid rgba(26, 54, 93, 0.08);
 }
 
 .reassurance h2 {
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 1.25rem;
 }
 
 .reassurance p {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
   color: #4b5563;
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
-.footer {
-  background-color: #e5e7eb;
-  color: #4b5563;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
+.reassurance strong {
+  color: #1a365d;
+  font-weight: 600;
 }

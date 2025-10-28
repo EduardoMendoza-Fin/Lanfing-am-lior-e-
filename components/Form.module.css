@@ -1,3 +1,4 @@
+/* ----------- STRUCTURE GLOBALE ----------- */
 .wrapper {
   background-color: #ffffff;
 }
@@ -10,14 +11,23 @@
   border: 1px solid rgba(26, 54, 93, 0.08);
 }
 
+/* ----------- TITRE ET SOUS-TITRE ----------- */
 .header h2 {
   margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  color: #1a365d;
+  text-align: center;
 }
 
 .header p {
   color: #475569;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
+/* ----------- BARRE DE PROGRESSION ----------- */
 .progress {
   position: relative;
   height: 12px;
@@ -32,7 +42,7 @@
   top: 0;
   bottom: 0;
   width: 50%;
-  background: var(--gold-soft);
+  background: var(--gold-soft, #f6c247);
   border-radius: 999px;
   animation: pulse 2.5s infinite alternate;
 }
@@ -54,11 +64,13 @@
   }
 }
 
+/* ----------- FORMULAIRE ----------- */
 .form {
   display: grid;
   gap: 1.2rem;
 }
 
+/* ----------- CHAMPS ----------- */
 .field {
   display: flex;
   flex-direction: column;
@@ -67,46 +79,113 @@
 }
 
 .field span {
-  color: var(--blue-deep);
+  color: var(--blue-deep, #1a365d);
+  font-size: 0.95rem;
 }
 
 .field input,
 .field select {
-  padding: 0.85rem 1rem;
-  border-radius: 12px;
+  background: #f9fafb;
   border: 1px solid rgba(26, 54, 93, 0.25);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
   font-size: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* 🟢 AJOUT : flèche stylisée pour le menu déroulant */
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #f9fafb
+    url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
+    no-repeat right 1rem center;
+  background-size: 1rem;
+  cursor: pointer;
+  padding-right: 2.5rem; /* espace pour la flèche */
+}
+
+/* 🟢 AJOUT : focus visuel doux */
 .field input:focus,
 .field select:focus {
   outline: none;
-  border-color: var(--blue-deep);
-  box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.18);
+  border-color: #f6c247;
+  box-shadow: 0 0 0 3px rgba(246, 194, 71, 0.25);
 }
 
+/* ----------- BOUTON CTA ----------- */
+.cta-button {
+  width: 100%;
+  background: #f6c247;
+  color: #111827;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 0.5rem;
+}
+
+.cta-button:hover {
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+/* ----------- TEXTE D’INFO & MESSAGES ----------- */
 .notice {
-  font-size: 0.85rem;
-  color: #475569;
+  font-size: 0.8rem;
+  color: #64748b;
   text-align: center;
-  margin-top: -0.5rem;
+  margin-top: 0.75rem;
+  line-height: 1.4;
 }
 
 .success {
   color: #047857;
   text-align: center;
   font-weight: 600;
+  margin-top: 0.75rem;
 }
 
 .error {
   color: #b91c1c;
   text-align: center;
   font-weight: 600;
+  margin-top: 0.75rem;
 }
 
-@media (min-width: 768px) {
+/* ----------- RESPONSIVE MOBILE ----------- */
+@media (max-width: 768px) {
   .card {
-    padding: 3rem 3.2rem;
+    border-radius: 18px;
+    padding: 2rem 1.25rem;
+    box-shadow: 0 12px 30px rgba(26, 54, 93, 0.12);
+  }
+
+  .header h2 {
+    font-size: 1.35rem;
+    line-height: 1.4;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .field input,
+  .field select {
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
   }
 }
