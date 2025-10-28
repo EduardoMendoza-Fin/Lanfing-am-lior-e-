@@ -1,0 +1,27 @@
+.page {
+  background-color: #ffffff;
+}
+
+.reassurance {
+  background-color: #f2f4f7;
+  text-align: center;
+  color: #1f2937;
+}
+
+.reassurance h2 {
+  margin-bottom: 1rem;
+}
+
+.reassurance p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #4b5563;
+}
+
+.footer {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}

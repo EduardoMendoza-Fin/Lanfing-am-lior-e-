@@ -1,0 +1,112 @@
+.wrapper {
+  background-color: #ffffff;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 30px 60px rgba(26, 54, 93, 0.15);
+  border: 1px solid rgba(26, 54, 93, 0.08);
+}
+
+.header h2 {
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #475569;
+}
+
+.progress {
+  position: relative;
+  height: 12px;
+  background-color: rgba(26, 54, 93, 0.12);
+  border-radius: 999px;
+  margin: 1.5rem 0 2rem;
+}
+
+.progressBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: var(--gold-soft);
+  border-radius: 999px;
+  animation: pulse 2.5s infinite alternate;
+}
+
+.progressLabel {
+  display: block;
+  text-align: right;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(245, 184, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 18px rgba(245, 184, 0, 0.55);
+  }
+}
+
+.form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.field span {
+  color: var(--blue-deep);
+}
+
+.field input,
+.field select {
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(26, 54, 93, 0.25);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--blue-deep);
+  box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.18);
+}
+
+.notice {
+  font-size: 0.85rem;
+  color: #475569;
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+.success {
+  color: #047857;
+  text-align: center;
+  font-weight: 600;
+}
+
+.error {
+  color: #b91c1c;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 3rem 3.2rem;
+  }
+}
