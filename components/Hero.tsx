@@ -40,8 +40,7 @@ const Hero = ({ onScrollToForm }: HeroProps) => {
 
           {/* Sous-titre premium */}
           <p className={styles.subtitle}>
-            En partenariat exclusif avec <strong>iA Groupe financier</strong>, nos conseillers certifiés comparent les meilleures
-            protections disponibles pour vous offrir une couverture solide et abordable, sans vente ni pression.
+            En partenariat exclusif avec <strong>iA Groupe financier.</strong>
           </p>
 
           {/* CTA principal */}
@@ -52,7 +51,7 @@ const Hero = ({ onScrollToForm }: HeroProps) => {
           {/* Points de confiance */}
           <ul className={styles.bullets}>
             <li>✨ Jusqu’à 40 % d’économies sur votre assurance actuelle</li>
-            <li>🤝 Conseillers certifiés au Québec sans vente, sans pression</li>
+            <li>🤝 Conseillers certifiés au Québec.</li>
           </ul>
         </div>
       </div>
