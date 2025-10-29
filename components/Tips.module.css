@@ -1,58 +1,64 @@
+/* --- SECTION GLOBALE --- */
 .section {
-  background-color: #fafbfc;
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
   padding: 5rem 1.5rem;
 }
 
+/* --- CONTAINER --- */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
 
 .container h2 {
-  font-size: 2.2rem;
-  color: #1f2937;
+  font-size: 2rem;
+  color: #1e3a8a; /* bleu foncé */
   font-weight: 700;
   margin-bottom: 3rem;
 }
 
+/* --- CARTES --- */
 .cards {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .card {
   background-color: #ffffff;
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   padding: 2rem;
   text-align: left;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-  border: 1px solid #f0f0f0;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  font-size: 1.25rem;
-  color: #14213d;
-  margin-bottom: 0.8rem;
-  font-weight: 700;
-}
-
-.card p {
-  color: #4b5563;
-  line-height: 1.6;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1); /* léger halo bleu */
 }
 
 .icon {
-  font-size: 1.4rem;
-  color: #f6c247;
+  font-size: 1.5rem;
+  color: #2563eb; /* bleu principal */
   margin-bottom: 0.75rem;
+}
+
+/* --- TITRE DES CARTES --- */
+.card h3 {
+  font-size: 1.15rem;
+  color: #1e3a8a;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+/* --- TEXTE --- */
+.card p {
+  color: #475569;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* --- CTA --- */
@@ -62,23 +68,25 @@
 }
 
 .ctaButton {
-  background: linear-gradient(135deg, #f6c247, #ffd86b);
-  color: #111827;
-  font-weight: 700;
+  background-color: #2563eb; /* bouton bleu cohérent */
+  color: #ffffff;
+  font-weight: 600;
   padding: 1rem 2rem;
   border: none;
   border-radius: 9999px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
 }
 
 .ctaButton:hover {
+  background-color: #1e40af;
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(246, 194, 71, 0.35);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
 }
 
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .section {
     padding: 3rem 1.25rem;
@@ -86,5 +94,9 @@
 
   .card {
     padding: 1.75rem;
+  }
+
+  .container h2 {
+    font-size: 1.6rem;
   }
 }

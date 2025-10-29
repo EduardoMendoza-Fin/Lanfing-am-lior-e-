@@ -109,10 +109,7 @@ const FormSection = () => {
 
           <div className={styles.header}>
             <h2>Votre analyse gratuite, en moins d’une minute.</h2>
-            <p>
-              Quelques réponses suffisent pour recevoir votre estimation
-              personnalisée.
-            </p>
+            
           </div>
 
           <div className={styles.progress} aria-hidden="true">

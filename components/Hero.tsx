@@ -1,5 +1,6 @@
 import styles from './Hero.module.css';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 type HeroProps = {
   onScrollToForm?: () => void;
@@ -30,30 +31,24 @@ const Hero = ({ onScrollToForm }: HeroProps) => {
       <div className={styles.overlay}>
         <div className={styles.content}>
           {/* Tagline */}
-          <span className={styles.tagline}>🔒 Analyse confidentielle • Offerte sans frais</span>
+          <span className={styles.tagline}>🔒 Analyse confidentielle - offerte sans frais</span>
 
           {/* Titre principal */}
           <h1 className={styles.title}>
-            Les astuces des conseillers pour protéger votre maison... <br />
-            <span className={styles.highlight}>sans payer trop cher.</span>
+            Voulez-vous payer moins cher<br />
+            pour protéger votre maison?
           </h1>
 
-          {/* Sous-titre premium */}
+          {/* Sous-titre */}
           <p className={styles.subtitle}>
-            Remplissez le court questionnaire pour découvrir combien vous pourriez<strong> économiser sur votre assurance hypothécaire.</strong>
+            Obtenez votre estimation gratuite et découvrez en 30 secondes
+            combien vous pourriez économiser sur votre assurance hypothécaire.
           </p>
 
-          {/* CTA principal */}
+          {/* Champ / CTA */}
           <button className={styles.cta} onClick={handleScrollToForm}>
-            Découvrir mes économies maintenant → 
+            Découvrir mes économies →
           </button>
-
-          {/* Points de confiance */}
-          <ul className={styles.bullets}>
-            <li>🔹 Jusqu’à 40 % d’économies sur votre assurance actuelle</li>
-            <li>🔹 Conseillers certifiés au Québec.</li>
-            <li>🔹 Déjà +300 propriétaires analysés au Québec</li>
-          </ul>
         </div>
       </div>
     </motion.header>

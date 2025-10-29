@@ -7,10 +7,10 @@
 
 /* ----------- VARIABLES ----------- */
 :root {
-  --blue-deep: #1a365d;
-  --gold-soft: #f5b800;
-  --gray-light: #f5f6f9;
-  --text-dark: #111827;
+  --blue-deep: #1e3a8a; /* Bleu profond (titre + accents) */
+  --blue-primary: #2563eb; /* Bleu CTA principal */
+  --gray-light: #f8fafc; /* Fond doux */
+  --text-dark: #0f172a; /* Texte principal légèrement plus contrasté */
 }
 
 /* ----------- RESET GLOBAL ----------- */
@@ -62,9 +62,9 @@ button {
 
 /* ----------- CTA GLOBAL ----------- */
 .cta-button {
-  background: linear-gradient(135deg, var(--gold-soft), #ffd24d);
+  background-color: var(--blue-primary);
   border: none;
-  color: #1a1a1a;
+  color: #ffffff;
   padding: 1rem 2rem;
   border-radius: 999px;
   font-weight: 700;
@@ -75,11 +75,13 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
 }
 
 .cta-button:hover {
+  background-color: #1e40af;
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(245, 184, 0, 0.25);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
 }
 
 .cta-button:active {
@@ -87,7 +89,7 @@ button {
 }
 
 .cta-button:focus {
-  outline: 3px solid rgba(245, 184, 0, 0.3);
+  outline: 3px solid rgba(37, 99, 235, 0.3);
   outline-offset: 2px;
 }
 

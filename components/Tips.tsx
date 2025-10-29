@@ -17,7 +17,7 @@ const tips: TipItem[] = [
     icon: '📄',
     title: 'Astuce 2 : Révisez votre contrat',
     description:
-      "Votre assurance peut être ajustée sans refaire votre prêt. Un conseiller peut revoir vos protections pour les rendre plus justes et souvent réduire vos paiements chaque mois. "
+      "Votre assurance peut être ajustée sans refaire votre prêt. Un conseiller peut revoir vos protections pour les rendre plus justes et souvent réduire vos paiements chaque mois."
   },
   {
     icon: '🔒',
@@ -33,22 +33,22 @@ type TipsProps = {
 
 const Tips = ({ onRequestAnalysis }: TipsProps) => {
   return (
-    <section className={`section ${styles.wrapper}`}>
-      <div className="container">
-        <h2 className={styles.title}>Les 3 astuces clés</h2>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <h2>Les 3 astuces clés</h2>
 
-        <div className={styles.grid}>
+        <div className={styles.cards}>
           {tips.map((tip) => (
             <article key={tip.title} className={styles.card}>
               <div className={styles.icon}>{tip.icon}</div>
-              <h3 className={styles.cardTitle}>{tip.title}</h3>
-              <p className={styles.cardDescription}>{tip.description}</p>
+              <h3>{tip.title}</h3>
+              <p>{tip.description}</p>
             </article>
           ))}
         </div>
 
-        <div className={styles.ctaContainer}>
-          <button className="cta-button" onClick={onRequestAnalysis}>
+        <div className={styles.ctaWrapper}>
+          <button className={styles.ctaButton} onClick={onRequestAnalysis}>
             Je veux découvrir mes économies →
           </button>
         </div>
