@@ -19,6 +19,9 @@ const HomePage = () => {
   return (
     <div className={styles.page}>
       <Hero onScrollToForm={scrollToForm} />
+      <section ref={formRef}>
+        <FormSection />
+      </section>
       <Tips onRequestAnalysis={scrollToForm} />
       <HowItWorks onStart={scrollToForm} />
       <section ref={formRef}>

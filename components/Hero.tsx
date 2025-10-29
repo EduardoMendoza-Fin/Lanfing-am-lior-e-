@@ -50,9 +50,9 @@ const Hero = ({ onScrollToForm }: HeroProps) => {
 
           {/* Points de confiance */}
           <ul className={styles.bullets}>
-            <li>✨ Jusqu’à 40 % d’économies sur votre assurance actuelle</li>
-            <li>🤝 Conseillers certifiés au Québec.</li>
-            <li>🏠 Déjà +300 propriétaires analysés au Québec</li>
+            <li>🔹 Jusqu’à 40 % d’économies sur votre assurance actuelle</li>
+            <li>🔹 Conseillers certifiés au Québec.</li>
+            <li>🔹 Déjà +300 propriétaires analysés au Québec</li>
           </ul>
         </div>
       </div>
