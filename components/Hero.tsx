@@ -35,8 +35,7 @@ const Hero = ({ onScrollToForm }: HeroProps) => {
 
           {/* Titre principal */}
           <h1 className={styles.title}>
-            Voulez-vous payer moins cher<br />
-            pour protéger votre maison?
+            Protégez votre maison intelligemment.<br />
           </h1>
 
           {/* Sous-titre */}
@@ -47,7 +46,7 @@ const Hero = ({ onScrollToForm }: HeroProps) => {
 
           {/* Champ / CTA */}
           <button className={styles.cta} onClick={handleScrollToForm}>
-            Découvrir mes économies →
+            Découvrir mon analyse gratuite →
           </button>
         </div>
       </div>
