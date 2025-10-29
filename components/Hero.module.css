@@ -2,19 +2,14 @@
 .hero {
   position: relative;
   min-height: 88vh;
-  background: linear-gradient(
-      rgba(17, 28, 45, 0.85),
-      rgba(17, 28, 45, 0.9)
-    ),
-    url('/images/family-house.jpg'); /* 👈 image locale */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #0f1c2e 0%, #1a365d 35%, #f6c247 110%);
   display: flex;
   align-items: center;
   color: #ffffff;
   text-align: left;
+  overflow: hidden;
 }
+
 .overlay {
   width: 100%;
   padding: 4rem 1.5rem;
@@ -31,7 +26,7 @@
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
@@ -53,7 +48,7 @@
 /* --- SOUS-TITRE --- */
 .subtitle {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2.2rem;
   line-height: 1.65;
   max-width: 640px;
