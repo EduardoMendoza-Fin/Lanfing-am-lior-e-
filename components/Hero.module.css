@@ -6,15 +6,15 @@
       rgba(17, 28, 45, 0.85),
       rgba(17, 28, 45, 0.9)
     ),
-    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+    url('/images/family-house.jpg'); /* 👈 image locale */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   color: #ffffff;
   text-align: left;
 }
-
 .overlay {
   width: 100%;
   padding: 4rem 1.5rem;

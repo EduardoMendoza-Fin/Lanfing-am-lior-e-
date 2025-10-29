@@ -49,7 +49,7 @@ const Tips = ({ onRequestAnalysis }: TipsProps) => {
 
         <div className={styles.ctaContainer}>
           <button className="cta-button" onClick={onRequestAnalysis}>
-            Recevoir mon analyse gratuite →
+            Je veux découvrir mes économies →
           </button>
         </div>
       </div>

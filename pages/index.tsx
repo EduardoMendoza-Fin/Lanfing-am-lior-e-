@@ -4,6 +4,7 @@ import Tips from '../components/Tips';
 import HowItWorks from '../components/HowItWorks';
 import FormSection from '../components/Form';
 import styles from '../styles/Home.module.css';
+import Popup from '../components/Popup'; // ← ajout pour la popup
 
 const HomePage = () => {
   const formRef = useRef<HTMLElement | null>(null);
@@ -29,8 +30,9 @@ const HomePage = () => {
         <div className="container">
           <h2>Pourquoi cette analyse est gratuite&nbsp;?</h2>
           <p>
-            Cette analyse indépendante a pour seul objectif d’informer les propriétaires sur les solutions d’assurance
-            hypothécaire souvent méconnues au Québec. <br />
+            Parce qu’au Québec, peu de gens savent qu’ils peuvent choisir leur propre assurance hypothécaire.
+            Notre mission : vous informer sans sans vente, sans pression.
+            Vous comparez, vous économisez, vous décidez. <br />
              <br />
             <strong>Votre confidentialité est 100&nbsp;% garantie.</strong>
           </p>
@@ -40,6 +42,9 @@ const HomePage = () => {
       <footer className={styles.footer}>
         Service d’analyse indépendante – 100 % confidentiel – Québec.
       </footer>
+
+      {/* ----------- POPUP D’INTERACTION (ÉTAPE 3) ----------- */}
+      <Popup />
     </div>
   );
 };

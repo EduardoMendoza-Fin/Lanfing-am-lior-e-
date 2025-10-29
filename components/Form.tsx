@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import styles from './Form.module.css';
+import CountdownTimer from './CountdownTimer'; // ← ajout du timer
 
 type SubmissionStatus = 'idle' | 'success' | 'error';
 
@@ -69,6 +70,9 @@ const FormSection = () => {
     <section id="lead-form" className={`section ${styles.wrapper}`}>
       <div className="container">
         <div className={styles.card}>
+          {/* ----------- TIMER AJOUTÉ ----------- */}
+          <CountdownTimer initialMinutes={1} />
+
           <div className={styles.header}>
             <h2>Votre analyse gratuite, en moins d’une minute.</h2>
             <p>
@@ -85,7 +89,7 @@ const FormSection = () => {
           <form className={styles.form} onSubmit={handleSubmit}>
             {/* Nom complet */}
             <label className={styles.field}>
-              <span>Nom complet</span>
+              <span>Votre nom</span>
               <input
                 type="text"
                 value={formData.fullName}
@@ -152,7 +156,7 @@ const FormSection = () => {
             <button className="cta-button" type="submit" disabled={isSubmitting}>
               {isSubmitting
                 ? 'Analyse en cours…'
-                : 'Voir mes résultats gratuits →'}
+                : 'Voir combien je peux économiser →'}
             </button>
 
             <p className={styles.notice}>

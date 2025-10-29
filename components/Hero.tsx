@@ -40,18 +40,19 @@ const Hero = ({ onScrollToForm }: HeroProps) => {
 
           {/* Sous-titre premium */}
           <p className={styles.subtitle}>
-            En partenariat exclusif avec <strong>iA Groupe financier.</strong>
+            Remplissez le court questionnaire pour découvrir combien vous pourriez<strong> économiser sur votre assurance hypothécaire.</strong>
           </p>
 
           {/* CTA principal */}
           <button className={styles.cta} onClick={handleScrollToForm}>
-            Obtenir mon analyse confidentielle →
+            Découvrir mes économies maintenant → 
           </button>
 
           {/* Points de confiance */}
           <ul className={styles.bullets}>
             <li>✨ Jusqu’à 40 % d’économies sur votre assurance actuelle</li>
             <li>🤝 Conseillers certifiés au Québec.</li>
+            <li>🏠 Déjà +300 propriétaires analysés au Québec</li>
           </ul>
         </div>
       </div>
