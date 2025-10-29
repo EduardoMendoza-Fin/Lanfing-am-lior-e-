@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
+import Image from 'next/image'; // ← ajout pour les logos
 import styles from './Form.module.css';
 import CountdownTimer from './CountdownTimer'; // ← ajout du timer
 
@@ -70,8 +71,41 @@ const FormSection = () => {
     <section id="lead-form" className={`section ${styles.wrapper}`}>
       <div className="container">
         <div className={styles.card}>
+          {/* ----------- LOGOS AJOUTÉS ----------- */}
+          <div className={styles.trustLogos}>
+            <Image
+              src="/logos/amf-logo.png"
+              alt="Autorité des marchés financiers"
+              height={36}
+              width={70}
+              priority
+            />
+            <Image
+              src="/logos/ia-groupe-financier.png"
+              alt="iA Groupe Financier"
+              height={36}
+              width={46}
+              priority
+            />
+            <Image
+              src="/logos/nordea-conseil.png"
+              alt="Nordéa Conseil"
+              height={46}
+              width={46}
+              priority
+            />
+          </div>
+          {/* ------------------------------------ */}
+
+
+
+
+
+
+
+
           {/* ----------- TIMER AJOUTÉ ----------- */}
-          <CountdownTimer initialMinutes={1} />
+          <CountdownTimer initialMinutes={4.5} />
 
           <div className={styles.header}>
             <h2>Votre analyse gratuite, en moins d’une minute.</h2>
@@ -85,6 +119,7 @@ const FormSection = () => {
             <div className={styles.progressBar} />
             <span className={styles.progressLabel}>Étape 1 sur 2</span>
           </div>
+
 
           <form className={styles.form} onSubmit={handleSubmit}>
             {/* Nom complet */}
@@ -160,8 +195,7 @@ const FormSection = () => {
             </button>
 
             <p className={styles.notice}>
-              🔒 Données 100 % confidentielles, aucun
-              engagement.
+              🔒 Données 100 % confidentielles, aucun engagement.
             </p>
 
             {status === 'success' && (

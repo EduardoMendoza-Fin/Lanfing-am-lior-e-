@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./CountdownTimer.module.css"; // ← ajout de l'import du CSS module
 
 interface CountdownTimerProps {
   initialMinutes?: number;
@@ -18,17 +19,7 @@ export default function CountdownTimer({ initialMinutes = 15 }: CountdownTimerPr
   const seconds = timeLeft % 60;
 
   return (
-    <div
-      style={{
-        background: "rgba(255,255,255,0.1)",
-        color: "#fff",
-        padding: "10px 16px",
-        borderRadius: "8px",
-        textAlign: "center",
-        marginBottom: "1rem",
-        fontSize: "0.95rem",
-      }}
-    >
+    <div className={styles.timerBox}>
       ⏳ Votre analyse gratuite est disponible pendant encore{" "}
       <strong>
         {minutes}:{seconds.toString().padStart(2, "0")}
